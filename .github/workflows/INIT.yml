@@ -69,8 +69,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - run: |
-          git config --local user.name github-actions[bot]
-          git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config --local user.name AutoUpdate[bot]
+          git config --local user.email AutoUpdate[bot]@users.noreply.github.com
       - if: ${{ env.KEY != '' }}
         run: python main.py -l ${{ github.event.inputs.level || 'INFO' }} -i -k ${{ secrets.KEY }} -P ${{ github.event.inputs.args }}
       - if: ${{ env.KEY == '' }}
