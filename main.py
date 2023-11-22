@@ -35,7 +35,7 @@ parser.add_argument('-P', '--no-push', action='store_true', default=False)
 parser.add_argument('-u', '--update', action='store_true', default=False)
 parser.add_argument('-a', '--app-id', dest='app_id_list', action='extend', nargs='*')
 parser.add_argument('-U', '--users', dest='user_list', action='extend', nargs='*')
-parser.add_argument('-S', '--Skip', action='store_true', default=True)
+parser.add_argument('-S', '--Skip', action='store_true', default=False)
 
 class MyJson(dict):
 
@@ -458,7 +458,7 @@ class ManifestAutoUpdate:
                         with lock:
                             if int(app_id) not in self.user_info[username]['app']:
                                 self.user_info[username]['app'].append(int(app_id))
-                            if self.check_manifest_exist(depot_id, manifest_gid):
+                            if self.check_manifest_exist(depot_id, manifest_gid) and not self.Skip:
                                 self.log.info(f'Already got the manifest: {depot_id}_{manifest_gid}')
                                 continue
                         flag = False
@@ -568,7 +568,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     ManifestAutoUpdate(args.credential_location, level=args.level, pool_num=args.pool_num, retry_num=args.retry_num,
                        update_wait_time=args.update_wait_time, key=args.key, init_only=args.init_only,
-                       cli=args.cli, app_id_list=args.app_id_list, user_list=args.user_list).run(update=args.update)
+                       cli=args.cli, app_id_list=args.app_id_list, user_list=args.user_list,Skip=args.Skip).run(update=args.update)
     if not args.no_push:
         if not args.init_only:
             push()
