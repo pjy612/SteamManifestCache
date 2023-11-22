@@ -35,7 +35,7 @@ parser.add_argument('-P', '--no-push', action='store_true', default=False)
 parser.add_argument('-u', '--update', action='store_true', default=False)
 parser.add_argument('-a', '--app-id', dest='app_id_list', action='extend', nargs='*')
 parser.add_argument('-U', '--users', dest='user_list', action='extend', nargs='*')
-
+parser.add_argument('-S', '--Skip', action='store_true', default=True)
 
 class MyJson(dict):
 
