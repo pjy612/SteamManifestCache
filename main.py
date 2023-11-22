@@ -112,7 +112,7 @@ class ManifestAutoUpdate:
             else:
                 try:
                     self.log.info('Getting the full branch!')
-                    self.repo.git.fetch('--unshallow')
+                    #self.repo.git.fetch('--unshallow')
                 except git.exc.GitCommandError as e:
                     self.log.debug(f'Getting the full branch failed: {e}')
                 self.app_sha = self.repo.git.rev_list('--max-parents=0', 'HEAD').strip()
