@@ -88,7 +88,7 @@ class ManifestAutoUpdate:
     tags = set()
 
     def __init__(self, credential_location=None, level=None, pool_num=None, retry_num=None, update_wait_time=None,
-                 key=None, init_only=False, cli=False, app_id_list=None, user_list=None):
+                 key=None, init_only=False, cli=False, app_id_list=None, user_list=None, Skip=False):
         if level:
             level = logging.getLevelName(level.upper())
         else:
@@ -98,6 +98,7 @@ class ManifestAutoUpdate:
         logging.getLogger('MySteamClient').setLevel(logging.WARNING)
         self.init_only = init_only
         self.cli = cli
+        self.Skip = Skip
         self.pool_num = pool_num or self.pool_num
         self.retry_num = retry_num or self.retry_num
         self.update_wait_time = update_wait_time or self.update_wait_time
