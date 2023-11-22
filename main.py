@@ -323,7 +323,6 @@ class ManifestAutoUpdate:
         shared_secret = self.two_factor.get(username)
         steam.username = username
         result = steam.relogin()
-        self.log.info(f'******{username} Login ret: {result}******')
         wait = 1
         if result != EResult.OK:
             if result != EResult.Fail:
