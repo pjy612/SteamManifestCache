@@ -118,7 +118,7 @@ def get_manifest(cdn, app_id, depot_id, manifest_gid, remove_old=False, save_pat
             }}'''
         config = json.loads(json_str)
         if 'extended' in app_id and 'listofdlc' in app_id['extended']:
-            dlcs = [int(dlc) for dlc in app_id[''extended'']['listofdlc'].split(',')]
+            dlcs = [int(dlc) for dlc in app_id['extended']['listofdlc'].split(',')]
             config['dlcs'] = dlcs
     if not os.path.isfile(app_path / 'appinfo.vdf'):
         with open(app_path / 'appinfo.vdf', 'w', encoding='utf-8') as f:
