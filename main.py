@@ -207,7 +207,8 @@ class ManifestAutoUpdate:
             app_repo = git.Repo(app_path)
             with lock:
                 if manifest_commit:
-                    app_repo.create_tag(f'{depot_id}_{manifest_gid}', manifest_commit)
+                    if not self.Skip:
+                        app_repo.create_tag(f'{depot_id}_{manifest_gid}', manifest_commit)
                 else:
                     if delete_list:
                         app_repo.git.rm(delete_list)
@@ -216,7 +217,8 @@ class ManifestAutoUpdate:
                     app_repo.git.add('config.json')
                     app_repo.git.add('appinfo.vdf')
                     app_repo.index.commit(f'Update depot: {depot_id}_{manifest_gid}')
-                    app_repo.create_tag(f'{depot_id}_{manifest_gid}')
+                    if not self.Skip:
+                        app_repo.create_tag(f'{depot_id}_{manifest_gid}')
         except KeyboardInterrupt:
             raise
         except:
