@@ -104,7 +104,7 @@ def get_manifest(cdn, app_id, depot_id, manifest_gid, remove_old=False, save_pat
     if not os.path.exists(app_path):
         os.makedirs(app_path)
     apps = cdn.steam.get_product_info([app_id])
-    app_id = apps['apps'][app_id]
+    appid = apps['apps'][app_id]
     if os.path.isfile(app_path / 'config.json'):
         with open(app_path / 'config.json') as f:
             config = json.load(f)
@@ -117,8 +117,8 @@ def get_manifest(cdn, app_id, depot_id, manifest_gid, remove_old=False, save_pat
             "dlcs": []
             }}'''
         config = json.loads(json_str)
-        if 'extended' in app_id and 'listofdlc' in app_id['extended']:
-            dlcs = [int(dlc) for dlc in app_id['extended']['listofdlc'].split(',')]
+        if 'extended' in appid and 'listofdlc' in appid['extended']:
+            dlcs = [int(dlc) for dlc in appid['extended']['listofdlc'].split(',')]
             config['dlcs'] = dlcs
     if not os.path.isfile(app_path / 'appinfo.vdf'):
         with open(app_path / 'appinfo.vdf', 'w', encoding='utf-8') as f:
