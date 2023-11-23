@@ -5,7 +5,7 @@ on:
       repo:
         description: repo
         required: true
-        default: 'https://github.com/wxy1343/ManifestAutoUpdate'
+        default: 'https://github.com/BlankTMing/ManifestCache'
     branches:
       - main
   schedule:
@@ -33,5 +33,5 @@ jobs:
           git config --local user.name github-actions[bot]
           git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
           python main.py -i -P -k ${{ secrets.KEY }}
-          python apps.py -r ${{ github.event.inputs.repo || 'https://github.com/wxy1343/ManifestAutoUpdate' }} -o data
+          python apps.py -r ${{ github.event.inputs.repo || 'https://github.com/BlankTMing/ManifestCache' }} -o data
           python push.py
