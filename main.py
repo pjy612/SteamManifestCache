@@ -36,6 +36,7 @@ parser.add_argument('-u', '--update', action='store_true', default=False)
 parser.add_argument('-a', '--app-id', dest='app_id_list', action='extend', nargs='*')
 parser.add_argument('-U', '--users', dest='user_list', action='extend', nargs='*')
 
+
 class MyJson(dict):
 
     def __init__(self, path):
@@ -87,7 +88,7 @@ class ManifestAutoUpdate:
     tags = set()
 
     def __init__(self, credential_location=None, level=None, pool_num=None, retry_num=None, update_wait_time=None,
-                 key=None, init_only=False, cli=False, app_id_list=None, user_list=None, Skip=False):
+                 key=None, init_only=False, cli=False, app_id_list=None, user_list=None):
         if level:
             level = logging.getLevelName(level.upper())
         else:
@@ -111,7 +112,7 @@ class ManifestAutoUpdate:
             else:
                 try:
                     self.log.info('Getting the full branch!')
-                    #self.repo.git.fetch('--unshallow')
+                    self.repo.git.fetch('--unshallow')
                 except git.exc.GitCommandError as e:
                     self.log.debug(f'Getting the full branch failed: {e}')
                 self.app_sha = self.repo.git.rev_list('--max-parents=0', 'HEAD').strip()
