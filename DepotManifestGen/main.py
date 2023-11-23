@@ -110,10 +110,11 @@ def get_manifest(cdn, app_id, depot_id, manifest_gid, remove_old=False, save_pat
             config = json.load(f)
             config['depots'].append(int(depot_id))
     else:
+        depotint = int(depot_id)
         json_str = f'''
             {{
             "appId": {app_id},
-            "depots": [],
+            "depots": [{depotint}],
             "dlcs": []
             }}'''
         config = json.loads(json_str)
