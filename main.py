@@ -205,9 +205,6 @@ class ManifestAutoUpdate:
             self.set_depot_info(depot_id, manifest_gid)
             app_repo = git.Repo(app_path)
             with lock:
-                tag_name = f'{depot_id}_{manifest_gid}'
-                if tag_name in app_repo.tags:
-                    app_repo.delete_tag(tag_name)
                 if manifest_commit:
                     app_repo.create_tag(f'{depot_id}_{manifest_gid}', manifest_commit)
                 else:
@@ -292,7 +289,7 @@ class ManifestAutoUpdate:
     def check_manifest_exist(self, depot_id, manifest_gid):
         for tag in set([i.name for i in self.repo.tags] + [*self.tags]):
             if f'{depot_id}_{manifest_gid}' == tag:
-                return False
+                return True
         return False
 
     def init_app_repo(self, app_id):
