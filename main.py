@@ -192,11 +192,11 @@ class ManifestAutoUpdate:
             exit()
 
     def delete_tag(repo, tag_name):
-    if tag_name in repo.tags:
-        repo.delete_tag(tag_name)
-        return True
-    else:
-        return False
+        if tag_name in repo.tags:
+            repo.delete_tag(tag_name)
+            return True
+        else:
+            return False
         
     def get_manifest_callback(self, username, app_id, depot_id, manifest_gid, args):
         result = args.value
