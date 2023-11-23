@@ -9,7 +9,7 @@ on:
       repo:
         description: repo
         required: true
-        default: https://github.com/BlankTMing/SteamManifestCache
+        default: https://github.com/BlankTMing/ManifestCache
       level:
         description: Logging Level
         required: true
@@ -44,4 +44,4 @@ jobs:
       - run: |
           git config --local user.name github-actions[bot]
           git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
-          python pr.py --repo ${{ github.event.inputs.repo || 'https://github.com/BlankTMing/SteamManifestCache' }} -t ${{ secrets.token }} -l ${{ github.event.inputs.level || 'INFO' }}
+          python pr.py --repo ${{ github.event.inputs.repo || 'https://github.com/BlankTMing/ManifestCache' }} -t ${{ secrets.token }} -l ${{ github.event.inputs.level || 'INFO' }}
