@@ -259,7 +259,7 @@ def main(args=None):
         else:
             result = steam.login(args.username, args.password, args.login_key, args.auth_code, args.two_factor_code,
                                  int(args.login_id) if args.login_id else None)
-    if result != EResult.OK and result != EResult.Fail:
+    if result != EResult.OK:
         log.error(f'Login failure reason: {result.__repr__()}')
         exit(result)
     app_id_list = []
