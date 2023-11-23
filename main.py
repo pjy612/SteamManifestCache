@@ -403,7 +403,7 @@ class ManifestAutoUpdate:
         self.log.debug(f'User {username} sentry_path: {sentry_path}')
         steam = MySteamClient(str(self.credential_location), sentry_path)
         result = self.login(steam, username, password)
-        if result != EResult.OK and result != EResult.Fail:
+        if result != EResult.OK:
             return
         self.log.info(f'User {username}: Waiting to initialize the cdn client!')
         cdn = self.retry(MyCDNClient, steam, retry_num=self.retry_num)
