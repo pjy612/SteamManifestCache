@@ -66,7 +66,7 @@ class Result(dict):
         return bool(self.result)
 
 
-def get_manifest(cdn, app_id, depot_id, manifest_gid, remove_old=False, save_path=None, retry_num=10):
+def get_manifest(cdn, app_id, depot_id,appinfo, manifest_gid, remove_old=False, save_path=None, retry_num=10):
     if not save_path:
         save_path = Path().absolute()
     app_path = save_path / f'depots/{app_id}'
@@ -103,8 +103,6 @@ def get_manifest(cdn, app_id, depot_id, manifest_gid, remove_old=False, save_pat
     manifest.payload.mappings.sort(key=lambda x: x.filename.lower())
     if not os.path.exists(app_path):
         os.makedirs(app_path)
-    apps = cdn.steam.get_product_info([app_id])
-    appid = apps['apps'][app_id]
     if os.path.isfile(app_path / 'config.json'):
         with open(app_path / 'config.json') as f:
             config = json.load(f)
@@ -118,12 +116,12 @@ def get_manifest(cdn, app_id, depot_id, manifest_gid, remove_old=False, save_pat
             "dlcs": []
             }}'''
         config = json.loads(json_str)
-        if 'extended' in appid and 'listofdlc' in appid['extended']:
-            dlcs = [int(dlc) for dlc in appid['extended']['listofdlc'].split(',')]
+        if 'extended' in appinfo and 'listofdlc' in appinfo['extended']:
+            dlcs = [int(dlc) for dlc in appinfo['extended']['listofdlc'].split(',')]
             config['dlcs'] = dlcs
     if not os.path.isfile(app_path / 'appinfo.vdf'):
         with open(app_path / 'appinfo.vdf', 'w', encoding='utf-8') as f:
-            vdf.dump(apps, f, pretty=True)
+            vdf.dump(appinfo, f, pretty=True)
     if os.path.isfile(app_path / 'Key.vdf'):
         with open(app_path / 'Key.vdf') as f:
             d = vdf.load(f)
@@ -300,7 +298,7 @@ def main(args=None):
                         manifest_gid = manifest_gid.get('gid')
                     if not isinstance(manifest_gid, str):
                         continue
-                    result_list.append(gevent.spawn(get_manifest, cdn, app_id, depot_id, manifest_gid, args.remove_old))
+                    result_list.append(gevent.spawn(get_manifest, cdn, app_id, depot_id,app manifest_gid, args.remove_old))
                     gevent.idle()
     try:
         gevent.joinall(result_list)
