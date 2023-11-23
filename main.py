@@ -363,7 +363,7 @@ class ManifestAutoUpdate:
             self.log.error(f'User {username}: Login failure reason: {result.__repr__()}')
         return result
 
-    def async_task(self, cdn, app_id, depot_id, manifest_gid):
+    def async_task(self, cdn, app_id, depot_id,appinfo, manifest_gid):
         self.init_app_repo(app_id)
         manifest_path = self.ROOT / f'depots/{app_id}/{depot_id}_{manifest_gid}.manifest'
         if manifest_path.exists():
@@ -378,7 +378,7 @@ class ManifestAutoUpdate:
                 self.log.debug(f'manifest_commit: {manifest_commit}')
                 return Result(result=True, app_id=app_id, depot_id=depot_id, manifest_gid=manifest_gid,
                               manifest_commit=manifest_commit)
-        return get_manifest(cdn, app_id, depot_id, manifest_gid, True, self.ROOT, self.retry_num)
+        return get_manifest(cdn, app_id, depot_id,appinfo, manifest_gid, True, self.ROOT, self.retry_num)
 
     def get_manifest(self, username, password, sentry_name=None):
         with lock:
@@ -461,7 +461,7 @@ class ManifestAutoUpdate:
                                 self.log.info(f'Already got the manifest: {depot_id}_{manifest_gid}')
                                 continue
                         flag = False
-                        job = gevent.Greenlet(LogExceptions(self.async_task), cdn, app_id, depot_id, manifest_gid)
+                        job = gevent.Greenlet(LogExceptions(self.async_task), cdn, app_id, depot_id,app, manifest_gid)
                         job.rawlink(
                             functools.partial(self.get_manifest_callback, username, app_id, depot_id, manifest_gid))
                         job_list.append(job)
