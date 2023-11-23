@@ -1,7 +1,15 @@
-name: MERGE
+name: PR
 on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
   workflow_dispatch:
     inputs:
+      repo:
+        description: repo
+        required: true
+        default: https://github.com/BlankTMing/SteamManifestCache
       level:
         description: Logging Level
         required: true
@@ -16,19 +24,15 @@ on:
           - INFO
           - DEBUG
           - NOTSET
-  schedule:
-    - cron: '0 */8 * * *'
 concurrency:
   group: wait
   cancel-in-progress: false
 jobs:
-  merge:
+  pr:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
-          submodules: recursive
+      - name: checkout
+        run: git clone --filter=blob:none -b ${{ github.ref_name }} --recurse-submodules https://${{ github.token }}@github.com/${{ github.repository }} .
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
         with:
@@ -40,6 +44,4 @@ jobs:
       - run: |
           git config --local user.name github-actions[bot]
           git config --local user.email 41898282+github-actions[bot]@users.noreply.github.com
-          python main.py -i -P -k ${{ secrets.KEY }} -l ${{ github.event.inputs.level || 'INFO' }}
-          python merge.py -t ${{ secrets.GITHUB_TOKEN }} -l ${{ github.event.inputs.level || 'INFO' }}
-          python push.py
+          python pr.py --repo ${{ github.event.inputs.repo || 'https://github.com/BlankTMing/SteamManifestCache' }} -t ${{ secrets.token }} -l ${{ github.event.inputs.level || 'INFO' }}
