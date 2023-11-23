@@ -298,7 +298,7 @@ def main(args=None):
                         manifest_gid = manifest_gid.get('gid')
                     if not isinstance(manifest_gid, str):
                         continue
-                    result_list.append(gevent.spawn(get_manifest, cdn, app_id, depot_id,app manifest_gid, args.remove_old))
+                    result_list.append(gevent.spawn(get_manifest, cdn, app_id, depot_id,app,manifest_gid, args.remove_old))
                     gevent.idle()
     try:
         gevent.joinall(result_list)
