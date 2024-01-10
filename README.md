@@ -1,4 +1,18 @@
+<div align="center">
+
+![SteamManifestCache](https://socialify.git.ci/pjy612/SteamManifestCache/image?description=1&font=Inter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Auto)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/pjy612/SteamManifestCache?style=for-the-badge)
+[![GitHub Release (with filter)](https://img.shields.io/github/v/release/pjy612/SteamManifestCache?style=for-the-badge)](https://github.com/pjy612/SteamManifestCache/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pjy612/SteamManifestCache/total?style=for-the-badge&color=violet)](https://github.com/pjy612/SteamManifestCache/releases)
+
+</div>
+
 # SteamManifestCache
+Steam 清单缓存  
+额外收录 游戏信息  
+暂不包含 解锁密钥  
+**如果感觉有用，麻烦动动小手给咱项目来个 star⭐ 吧**
+
 # 鸣谢列表
 + A佬 （外籍友人，提供了不少游戏资源信息，非常感谢
 + 月佬 （神壕，贡献了整个仓库 70-80% 的游戏
@@ -13,12 +27,6 @@
 ## 免责声明
 本仓库中所有内容仅供参考,因使用本仓库的任何内容造成的任何损失与本仓库作者和贡献者无关。
 
-## 介绍
-Steam 清单缓存  
-额外收录 游戏信息  
-暂不包含 解锁密钥  
-**如果感觉有用，麻烦动动小手给咱项目来个 star⭐ 吧**
-
 ## 百科文档
 一些名词介绍和工具说明可以参考 **[Wiki](https://github.com/pjy612/SteamManifestCache/wiki)**  
 
@@ -28,3 +36,6 @@ Tag Name is Manifest FileName
 
 ## 特别说明
 由于是本地任务，所以一些获取不全的游戏可能是因为锁区
+
+## Star 趋势图
+[![Stargazers over time](https://starchart.cc/pjy612/SteamManifestCache.svg)](https://starchart.cc/pjy612/SteamManifestCache)
