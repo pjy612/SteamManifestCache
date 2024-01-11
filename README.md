@@ -1,10 +1,11 @@
 <div align="center">
 
 ![SteamManifestCache](https://socialify.git.ci/pjy612/SteamManifestCache/image?description=1&font=Inter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Auto)
+<!--
 ![GitHub Repo Size](https://img.shields.io/github/repo-size/pjy612/SteamManifestCache?style=for-the-badge)
 [![GitHub Release (with filter)](https://img.shields.io/github/v/release/pjy612/SteamManifestCache?style=for-the-badge)](https://github.com/pjy612/SteamManifestCache/releases/latest)
 [![GitHub Downloads](https://img.shields.io/github/downloads/pjy612/SteamManifestCache/total?style=for-the-badge&color=violet)](https://github.com/pjy612/SteamManifestCache/releases)
-
+-->
 </div>
 
 # SteamManifestCache
