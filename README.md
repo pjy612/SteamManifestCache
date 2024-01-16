@@ -1,11 +1,18 @@
-<div align="center">
+# SteamManifestCache
+停止维护
 
-![SteamManifestCache](https://socialify.git.ci/pjy612/SteamManifestCache/image?description=1&font=Inter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Auto)
+# Steam正版平台不易，请尊重版权，支持正版。 
+
+## 讨论频道
+[讨论](https://github.com/pjy612/SteamManifestCache/discussions)
+## 百科文档
+一些名词介绍和工具说明可以参考 **[Wiki](https://github.com/pjy612/SteamManifestCache/wiki)**
 <!--
+<div align="center">
+![SteamManifestCache](https://socialify.git.ci/pjy612/SteamManifestCache/image?description=1&font=Inter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Auto)
 ![GitHub Repo Size](https://img.shields.io/github/repo-size/pjy612/SteamManifestCache?style=for-the-badge)
 [![GitHub Release (with filter)](https://img.shields.io/github/v/release/pjy612/SteamManifestCache?style=for-the-badge)](https://github.com/pjy612/SteamManifestCache/releases/latest)
 [![GitHub Downloads](https://img.shields.io/github/downloads/pjy612/SteamManifestCache/total?style=for-the-badge&color=violet)](https://github.com/pjy612/SteamManifestCache/releases)
--->
 </div>
 
 # SteamManifestCache
@@ -42,3 +49,4 @@ Tag Name is Manifest FileName
 
 ## Star 趋势图
 [![Stargazers over time](https://starchart.cc/pjy612/SteamManifestCache.svg)](https://starchart.cc/pjy612/SteamManifestCache)
+-->
