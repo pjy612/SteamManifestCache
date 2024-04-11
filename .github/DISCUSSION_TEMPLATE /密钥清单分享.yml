@@ -1,0 +1,30 @@
+title: "[游戏Id]游戏名称 {附加信息}"
+body:
+  - type: input
+    id: appid
+    attributes:
+      label: "Steam 游戏ID"
+    validations:
+      required: true
+  - type: textarea
+    id: keys
+    attributes:
+      label: "密钥列表"
+      placeholder: |
+        depotid;depotkey
+        depotid;depotkey
+      render: hash
+    validations:
+      required: true
+  - type: textarea
+    id: manifests
+    attributes:
+      label: "清单附件"
+      placeholder: |
+        将清单附件拖拽到此处
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: "备注"      
