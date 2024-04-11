@@ -4,6 +4,7 @@ body:
     id: appid
     attributes:
       label: "Steam 游戏ID"
+      description: "通过Steam游戏商店查看"
     validations:
       required: true
   - type: textarea
