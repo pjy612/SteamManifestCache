@@ -8,6 +8,10 @@
 [讨论](https://github.com/pjy612/SteamManifestCache/discussions)
 ## 百科文档
 一些名词介绍和工具说明可以参考 **[Wiki](https://github.com/pjy612/SteamManifestCache/wiki)**
+
+## 清单更新记录
+[当日更新记录](https://github.com/pjy612/SteamManifestCache/discussions/574)
+
 <!--
 <div align="center">
 ![SteamManifestCache](https://socialify.git.ci/pjy612/SteamManifestCache/image?description=1&font=Inter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Auto)
