@@ -12,6 +12,14 @@
 ## 清单更新记录
 [当日更新记录](https://github.com/pjy612/SteamManifestCache/discussions/574)
 
+## 打赏渠道
+对项目支持最大的大佬，捐助打赏的时候可以留言 许愿想要的游戏 说不定之后就能更新到的说！ 
+当然你也可以留言自己的github 不过那样没有分享游戏来得快...
+
+<img src="https://github.com/pjy612/SteamManifestCache/assets/4072526/ddc33557-6756-4024-a44a-132d809ed03d" alt="壕" width="400" height="450">  
+
+
+
 <!--
 <div align="center">
 ![SteamManifestCache](https://socialify.git.ci/pjy612/SteamManifestCache/image?description=1&font=Inter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Auto)
