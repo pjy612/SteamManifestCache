@@ -1,23 +1,26 @@
 # SteamManifestCache
-该项目停止维护，仅供分享交流  
-已恢复 讨论组 访问
+该项目仅供分享交流  
 
 # Steam正版平台不易，请尊重版权，支持正版。 
 
-## 讨论频道
-[讨论](https://github.com/pjy612/SteamManifestCache/discussions)
-## 百科文档
-一些名词介绍和工具说明可以参考 **[Wiki](https://github.com/pjy612/SteamManifestCache/wiki)**
+## 打赏渠道
+下面是对项目支持最大的大佬！    
+没有他这个项目就完全不会起步！  
+佬的游戏，就是大伙儿能嫖到的游戏！捐助大佬，就等于有更多的游戏！    
+捐助打赏的时候可以留言 许愿想要的游戏 说不定之后就能更新到的说！   
+当然你也可以留言自己的 github 幸运的话你懂的... 不过那样没有分享游戏来得快...  
+
+<img src="https://github.com/pjy612/SteamManifestCache/assets/4072526/ddc33557-6756-4024-a44a-132d809ed03d" alt="壕" width="400" height="450">  
+
 
 ## 清单更新记录
 [当日更新记录](https://github.com/pjy612/SteamManifestCache/discussions/574)
 
-## 打赏渠道
-对项目支持最大的大佬，捐助打赏的时候可以留言 许愿想要的游戏 说不定之后就能更新到的说！ 
-当然你也可以留言自己的github 不过那样没有分享游戏来得快...
+## 讨论频道
+[讨论](https://github.com/pjy612/SteamManifestCache/discussions)
 
-<img src="https://github.com/pjy612/SteamManifestCache/assets/4072526/ddc33557-6756-4024-a44a-132d809ed03d" alt="壕" width="400" height="450">  
-
+## 百科文档
+一些名词介绍和工具说明可以参考 **[Wiki](https://github.com/pjy612/SteamManifestCache/wiki)**
 
 
 <!--
