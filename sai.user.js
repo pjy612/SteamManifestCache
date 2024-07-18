@@ -9,7 +9,7 @@
 // @match        *://steamui.com/*
 // @run-at       document-end
 // @grant        none
-
+// @updateURL    https://github.com/pjy612/SteamManifestCache/raw/data/sai.user.js
 // ==/UserScript==
 
 (function() {
