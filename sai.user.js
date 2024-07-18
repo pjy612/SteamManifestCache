@@ -46,7 +46,7 @@
                     newLink.href = `sai://app/${appId}`;
                     newLink.target = '_blank';
                     newLink.setAttribute('data-bs-toggle', 'tooltip');
-                    newLink.title = '跳转至官方商店';
+                    newLink.title = 'SAI入库';
                     newLink.innerText = 'SAI入库';
                     db.parentNode.insertBefore(newLink, db);
                 }
