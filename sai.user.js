@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         SAI 辅助入库脚本
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  SteamDB & Steam Store & SteamUI 添加 SAI一键入库,配合 v1.0.7.1 及以上食用
 // @author       pjy612
 // @match        *://steamdb.info/app/*
 // @match        *://store.steampowered.com/app/*
 // @match        *://steamui.com/*
+// @match        *://*.steamui.com/*
 // @run-at       document-end
 // @grant        none
 // @updateURL    https://github.com/pjy612/SteamManifestCache/raw/data/sai.user.js
