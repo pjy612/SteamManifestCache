@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SAI 辅助入库脚本
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  SteamDB & Steam Store & SteamUI 添加 SAI一键入库,配合 v1.0.7.1 及以上食用
 // @author       pjy612
 // @match        *://steamdb.info/app/*
@@ -71,6 +71,16 @@
             childList: true,
             subtree: true
         });
+        const navLinks = document.querySelector('nav.app-links');
+        if (navLinks) {
+            addSteamDbButton(appId);
+            observer.disconnect(); // 元素出现后停止观察
+        }
+        const navLinks2 = document.querySelector('div.apphub_OtherSiteInfo');
+        if (navLinks2) {
+            addSteamButton(appId);
+            observer.disconnect(); // 元素出现后停止观察
+        }
     }
     function observeUI(){
         const observer = new MutationObserver((mutations, obs) => {
