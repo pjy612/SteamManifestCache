@@ -6,16 +6,6 @@
 
 # Steam正版平台不易，请尊重版权，支持正版。 
 
-## 打赏渠道
-下面是对项目支持最大的大佬！    
-没有他这个项目就完全不会起步！  
-佬的游戏，就是大伙儿能嫖到的游戏！捐助大佬，就等于有更多的游戏！    
-捐助打赏的时候可以留言 许愿想要的游戏 说不定之后就能更新到的说！   
-当然你也可以留言自己的 github 幸运的话你懂的... 不过那样没有分享游戏来得快...  
-
-<img src="https://github.com/pjy612/SteamManifestCache/assets/4072526/ddc33557-6756-4024-a44a-132d809ed03d" alt="壕" width="400" height="450">  
-
-
 ## 鸣谢列表
 + A佬 （外籍友人，提供了不少游戏资源信息，非常感谢
 + 月佬 （神壕，贡献了整个仓库 70-80% 的游戏
@@ -31,13 +21,6 @@
 + [@BlankTMing](https://github.com/BlankTMing) （提供了一些技术和清单支持）
   
 以上排名不分先后 为了避免被骚扰 所以用化名表示
-
-
-## 清单更新记录
-[当日更新记录](https://github.com/pjy612/SteamManifestCache/discussions/574)
-
-## 讨论频道
-[讨论](https://github.com/pjy612/SteamManifestCache/discussions)
 
 ## 百科文档
 一些名词介绍和工具说明可以参考 **[Wiki](https://github.com/pjy612/SteamManifestCache/wiki)**
