@@ -33,6 +33,7 @@
 + [@BlankTMing](https://github.com/BlankTMing) （提供了一些技术和清单支持）
 + FQQ（菜玩站长，不时扫货新游戏，跟着沾光，大大的赞）
 + Morrenus (隶属于 discord [MorrenusGames](https://discord.gg/MorrenusGames) 分享了很多密钥，该频道的机器人很好用，建议尝试
++ [o四季映姬o](https://space.bilibili.com/20568856) 密钥分享 ，还请吃 KFCV50 的 技术型 好姑凉
   
 以上排名不分先后 为了避免被骚扰 所以用化名表示
 
